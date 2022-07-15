@@ -3,11 +3,15 @@ Reactive Programming is a programming paradigm that deals with data streams and 
 Some common tools and practices used for Reactive Programming include:
 
 • Functional programming
+
 • Event-driven programming
+
 • Data flow programming
+
 • The Observer pattern
 
-=JasperReports=
+
+# JasperReports
 
 JasperReports is a reporting tool that helps you to create detailed reports, charts, and graphs. It can be used to create both static and dynamic reports. static reports are those that are created once and do not change, whereas dynamic reports are those that can be created on-demand and are based on changing data.
 
