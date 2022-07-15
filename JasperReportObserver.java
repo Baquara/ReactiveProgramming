@@ -1,8 +1,15 @@
-public class MyObserver implements Observer {
+
+
+import java.util.Observable;
+import java.util.Observer;
+import net.sf.jasperreports.engine.*;
+import net.sf.jasperreports.view.*;
+ 
+public class JasperReportObserver implements Observer {
    private JasperReport jasperReport;
    private DataSource dataSource;
  
-   public MyObserver(JasperReport jasperReport, DataSource dataSource) {
+   public JasperReportObserver(JasperReport jasperReport, DataSource dataSource) {
       this.jasperReport = jasperReport;
       this.dataSource = dataSource;
    }
@@ -11,7 +18,7 @@ public class MyObserver implements Observer {
    public void update(Observable o, Object arg) {
       try {
          JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, null, dataSource);
-         JasperExportManager.exportReportToPdfFile(jasperPrint, "myreport.pdf");
+         JasperViewer.viewReport(jasperPrint);
       } catch (JRException e) {
          e.printStackTrace();
       }
