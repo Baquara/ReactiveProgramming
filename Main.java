@@ -24,5 +24,17 @@ public class Main {
  
       // add observer
       dataSource.addObserver(new JasperReportObserver(jasperReport, dataSource));
+    
+    
+       // make some changes to the datasource
+       dataSource.setName("John Doe");
+       dataSource.setAddress("123 Main Street");
+       dataSource.setCity("New York");
+       dataSource.setState("NY");
+       dataSource.setZip("12345");
+
+       // the observer's update method will be called automatically
+       // and the report will be generated
+    
    }
 }
